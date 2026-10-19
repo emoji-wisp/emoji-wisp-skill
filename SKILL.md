@@ -65,8 +65,9 @@ console.log(result.content[0].text); // plain text result
 ## Usage guidance
 
 - **Finding an emoji for a feeling**: prefer `search_emojis` with an English or
-  Chinese meaning word (`cute`, `celebration`, `可爱` both work). Present
-  several options and let the user pick.
+  Chinese meaning word (`cute`, `celebration`, `虎`, `可爱` all work). Present
+  several options and let the user pick. Not every word has a page — "No
+  results" means try a synonym.
 - **Mashups**: `combine_emojis` only works for pairs that exist in Google Emoji
   Kitchen (~1000 popular emojis). If it returns "No mashup exists", try popular
   base emojis (faces, ❤️🔥✨) or fall back to `recommend_emojis`.
