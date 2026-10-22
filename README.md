@@ -33,7 +33,21 @@ Then connect your MCP client over stdio to
 ## Files
 
 - `SKILL.md` — the skill itself (setup, tool reference, usage guidance)
+- `scripts/publish.sh` — one-command publish (validate → commit → push → verify install)
 - `README.zh-CN.md` — 中文说明
+
+## Publishing
+
+```bash
+bash scripts/publish.sh                    # validate, commit (if dirty), push, verify
+bash scripts/publish.sh --version 1.2.0    # also bump SKILL.md metadata.version
+bash scripts/publish.sh --dry-run          # validate only
+```
+
+skills.sh indexes skills automatically: once this repo is on GitHub, users can
+`npx skills add emoji-wisp/emoji-wisp-skill`, and the skill appears on
+[skills.sh](https://skills.sh/emoji-wisp/emoji-wisp-skill) ranked by install
+telemetry — no submission required.
 
 ## Service
 

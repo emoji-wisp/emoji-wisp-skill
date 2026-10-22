@@ -8,6 +8,12 @@ description: >
   launch"), or turn text into emoji expressions ("emojiize this sentence",
   "replace words with emojis by mood"). Also use when the user mentions
   emoji-wisp, emoji wish, or the i68 emoji service — even if they don't say "MCP".
+license: MIT
+compatibility: Requires Node.js 24+, internet access, and an MCP-capable agent
+metadata:
+  author: emoji-wisp
+  version: "1.1.0"
+  homepage: https://emoji.i68.ltd
 ---
 
 # emoji-wisp
@@ -86,5 +92,4 @@ console.log(result.content[0].text); // plain text result
   (must be `https://emoji.i68.ltd/mcp`) and network reachability.
 - **Empty suggestions from suggest/recommend**: transient LLM pressure — retry
   once before giving up.
-- Docs & download page: https://emoji.i68.ltd/cli/ ·
-  [中文文档](https://emoji.i68.ltd/cli/)
+- Docs & download page: https://emoji.i68.ltd/cli/

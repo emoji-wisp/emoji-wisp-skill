@@ -29,7 +29,20 @@ curl -L -o emoji-wisp-cli.mjs https://emoji.i68.ltd/downloads/emoji-wisp-cli.mjs
 ## 文件
 
 - `SKILL.md` —— 技能本体（安装、工具参考、使用指引）
+- `scripts/publish.sh` —— 一键发布（校验 → 提交 → 推送 → 安装验证）
 - `README.md` —— English readme
+
+## 发布
+
+```bash
+bash scripts/publish.sh                    # 校验、提交（如有改动）、推送、验证
+bash scripts/publish.sh --version 1.2.0    # 同时更新 SKILL.md 的 metadata.version
+bash scripts/publish.sh --dry-run          # 仅校验，不提交不推送
+```
+
+skills.sh 自动收录：仓库推送到 GitHub 后，用户即可执行
+`npx skills add emoji-wisp/emoji-wisp-skill` 安装；技能会按安装遥测自动出现在
+[skills.sh](https://skills.sh/emoji-wisp/emoji-wisp-skill) 排行榜，无需提交审核。
 
 ## 服务
 
